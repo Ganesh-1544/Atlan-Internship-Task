@@ -8,13 +8,34 @@ Go to the main root directory-
 cd C:/User/Your_project
 Add command : npm install (To install all the dependencies from pakage.JSON)
 
-Go to Server folder-
-Add command - cd server
-Install all dependencies - npm install
+Open another terminal
+```
+cd server
+npm i
+npm run watch
+cp .env.example .env
+```
 
-After downloading all the package.json dependencies you need to run the file with 
-this command - for root directory file - npm run serve / npm run pwa
-for the server - npm run watch
+Add the Google API Key to the .env
+
+```
+GOOGLE_MAPS_API_KEY=add_your_key_here
+
+
+
+Now run this command to start the project 
+npm run serve
+
+And to start in PWA mode run the command
+npm run pwa
+
+Now go to https://console.cloud.google.com/
+
+Generate an API KEY.
+
+You'll need to ENABLE Maps API, Directions API, Places API, and Distance Matrix API.
+
+Add your new API KEY to the script inside **public/index.html**
 
 Please note that all the dependencies should be updated as per the installed versions..
    
